@@ -169,6 +169,15 @@ class SHSportsVenueMonitor:
         mins = minutes % 60
         return f"{hours:02d}:{mins:02d}"
     
+    def time_string_to_minutes(self, time_str: str) -> int:
+        """将时间字符串(HH:MM)转换为从00:00开始的分钟数"""
+        try:
+            hours, minutes = map(int, time_str.split(':'))
+            return hours * 60 + minutes
+        except (ValueError, AttributeError):
+            self.logger.warning(f"无效的时间格式: {time_str}，使用默认值18:00")
+            return 1080  # 默认18:00
+    
     def parse_available_slots(self, resources_data: Dict) -> List[Dict]:
         """解析可用时段，只返回8:00-22:00时间段的场地"""
         available_slots = []
@@ -190,14 +199,22 @@ class SHSportsVenueMonitor:
                 for resource in field_resources:
                     status = resource.get('status', '')
                     
+                    # 在parse_available_slots方法中，将第199-200行修改为：
+                    
                     # 检查是否可预定（过滤掉ORDERED和LOCKED状态）
                     if status not in ['ORDERED', 'LOCKED']:
                         start_minutes = resource.get('start', 0)
                         end_minutes = resource.get('end', 0)
                         
-                        # 添加时间范围过滤：只监控18:00之后的时段 (18:00 = 1080分钟)
-                        if start_minutes < 1080:
-                            continue  # 跳过18:00之前的时段
+                        # 检查时间过滤配置
+                        time_filter = self.config.get('time_filter', {})
+                        if time_filter.get('enabled', False):
+                            filter_start_time = time_filter.get('start_time', '18:00')
+                            # 将时间字符串转换为分钟数
+                            filter_start_minutes = self.time_string_to_minutes(filter_start_time)
+                            
+                            if start_minutes < filter_start_minutes:
+                                continue  # 跳过设定时间之前的时段
                         
                         price = resource.get('price', 0)
                         record_id = resource.get('recordId')

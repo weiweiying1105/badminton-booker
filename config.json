@@ -19,8 +19,8 @@
   },
   "venues": [
     {
-      "id": "23ddcbea5edb11ec853f6c92bf4651ca",
-      "name": "虹口",
+      "id": "2c93809e821eb0ed01822a128aaf00b8",
+      "name": "黄埔市民",
       "dates": [
         "2025-08-28",
         "2025-08-29"
@@ -29,6 +29,11 @@
   ],
   "check_interval": 30,
   "ssl_verify": false,
+  "time_filter": {
+    "enabled": true,
+    "start_time": "11:00",
+    "description": "只监控此时间之后的时段，格式HH:MM，设置为00:00表示不过滤"
+  },
   "notifications": {
     "email": {
       "enabled": false,
