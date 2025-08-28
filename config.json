@@ -1,0 +1,46 @@
+{
+  "check_bookable_url": "https://map.shsports.cn/order/v3/map/stadiumItem/bookable",
+  "get_resources_url": "https://map.shsports.cn/api/stadium/resources",
+  "referer": "https://servicewechat.com/wx8b97e9b9a6441e29/410/page-frame.html",
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090a13) UnifiedPCWindowsWechat(0xf254061a) XWEB/16203",
+    "Accept": "*/*",
+    "Accept-Language": "zh-CN,zh;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Authorization": "Bearer 51b879d7-cb79-45f3-949c-2c779bfa5c1e",
+    "Language": "zh_CN",
+    "Xweb-Xhr": "1",
+    "Sec-Fetch-Site": "cross-site",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Priority": "u=1, i",
+    "Referer": "https://servicewechat.com/wx8b97e9b9a6441e29/410/page-frame.html"
+  },
+  "venues": [
+    {
+      "id": "23ddcbea5edb11ec853f6c92bf4651ca",
+      "name": "虹口",
+      "dates": [
+        "2025-08-28",
+        "2025-08-29"
+      ]
+    }
+  ],
+  "check_interval": 30,
+  "ssl_verify": false,
+  "notifications": {
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.qq.com",
+      "smtp_port": 587,
+      "from_email": "your-email@qq.com",
+      "password": "your-authorization-code",
+      "to_email": "notify@example.com"
+    },
+    "webhook": {
+      "enabled": true,
+      "url": "https://oapi.dingtalk.com/robot/send?access_token=6104670d7d0e9b780dcd54c64e8709094e1fa2679d23d0102d9d7f8302f7de9f"
+    }
+  }
+}
