@@ -1,0 +1,25 @@
+2025-09-08 09:56:14,769 - INFO - 启动上海体育场馆定时监控，检查间隔: 30秒
+2025-09-08 09:56:14,769 - INFO - 监控的场馆数量: 1
+2025-09-08 09:56:14,770 - INFO - 开始监控场馆 黄埔市民 在 2025-08-28 的预定情况
+2025-09-08 09:56:14,770 - INFO - 检查预定开放状态: https://map.shsports.cn/order/v3/map/stadiumItem/bookable/2c93809e821eb0ed01822a128aaf00b8/2025-08-28
+2025-09-08 09:56:14,917 - INFO - 预定开放状态: {'bookable': True}
+2025-09-08 09:56:14,917 - INFO - 场馆 黄埔市民 在 2025-08-28 已开放预定，获取具体时段信息
+2025-09-08 09:56:14,936 - WARNING - 请求失败 (尝试 1/2): 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/stadium/resources/2c93809e821eb0ed01822a128aaf00b8/matrix?stadiumItemId=2c93809e821eb0ed01822a128aaf00b8&date=2025-08-28
+2025-09-08 09:56:14,936 - INFO - 尝试刷新token后重试...
+2025-09-08 09:56:14,936 - INFO - 正在刷新access_token...
+2025-09-08 09:56:15,270 - ERROR - 刷新access_token失败: 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/oauth/token?client_id=30d3b25db72041879c180593ebf9d0c6&grant_type=wxmp_code&client_secret=20ec787ba2ce4832aa4f3a9b08d4abbb&code=0c3TA4100VwsQU1T8p000ql52d1TA41A
+2025-09-08 09:56:15,289 - WARNING - 请求失败 (尝试 2/2): 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/stadium/resources/2c93809e821eb0ed01822a128aaf00b8/matrix?stadiumItemId=2c93809e821eb0ed01822a128aaf00b8&date=2025-08-28
+2025-09-08 09:56:15,289 - ERROR - 请求最终失败: 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/stadium/resources/2c93809e821eb0ed01822a128aaf00b8/matrix?stadiumItemId=2c93809e821eb0ed01822a128aaf00b8&date=2025-08-28
+2025-09-08 09:56:15,289 - WARNING - 无法获取场馆 黄埔市民 的资源信息
+2025-09-08 09:56:17,290 - INFO - 开始监控场馆 黄埔市民 在 2025-08-29 的预定情况
+2025-09-08 09:56:17,290 - INFO - 检查预定开放状态: https://map.shsports.cn/order/v3/map/stadiumItem/bookable/2c93809e821eb0ed01822a128aaf00b8/2025-08-29
+2025-09-08 09:56:17,362 - INFO - 预定开放状态: {'bookable': True}
+2025-09-08 09:56:17,363 - INFO - 场馆 黄埔市民 在 2025-08-29 已开放预定，获取具体时段信息
+2025-09-08 09:56:17,381 - WARNING - 请求失败 (尝试 1/2): 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/stadium/resources/2c93809e821eb0ed01822a128aaf00b8/matrix?stadiumItemId=2c93809e821eb0ed01822a128aaf00b8&date=2025-08-29
+2025-09-08 09:56:17,381 - INFO - 尝试刷新token后重试...
+2025-09-08 09:56:17,381 - INFO - 正在刷新access_token...
+2025-09-08 09:56:17,666 - ERROR - 刷新access_token失败: 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/oauth/token?client_id=30d3b25db72041879c180593ebf9d0c6&grant_type=wxmp_code&client_secret=20ec787ba2ce4832aa4f3a9b08d4abbb&code=0c3TA4100VwsQU1T8p000ql52d1TA41A
+2025-09-08 09:56:17,685 - WARNING - 请求失败 (尝试 2/2): 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/stadium/resources/2c93809e821eb0ed01822a128aaf00b8/matrix?stadiumItemId=2c93809e821eb0ed01822a128aaf00b8&date=2025-08-29
+2025-09-08 09:56:17,685 - ERROR - 请求最终失败: 401 Client Error: Unauthorized for url: https://map.shsports.cn/api/stadium/resources/2c93809e821eb0ed01822a128aaf00b8/matrix?stadiumItemId=2c93809e821eb0ed01822a128aaf00b8&date=2025-08-29
+2025-09-08 09:56:17,685 - WARNING - 无法获取场馆 黄埔市民 的资源信息
+2025-09-08 09:56:19,994 - INFO - 监控已停止
